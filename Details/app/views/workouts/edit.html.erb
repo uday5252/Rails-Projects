@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="jumbotron">
+
+    <h1>Edit Workout</h1>
+
+    <%= form_with(model: @workout, local: true) do |form| %>
+
+      <p>
+        <%= form.label :"Date" %><br>
+        <%= form.date_select :date %>
+      </p>
+
+      <p>
+        <%= form.label :"What did you workout?" %><br>
+        <%= form.text_area :workout %>
+      </p>
+
+      <p>
+        <%= form.label :"How was your mood?" %><br>
+        <%= form.text_area :mood %>
+      </p>
+
+      <p>
+        <%= form.label :"How long did you workout?" %><br>
+        <%= form.text_area :length %>
+      </p>
+
+      <p>
+        <%= form.submit %>
+      </p>
+    <% end %>
+
+
+
+  </div>
+</div>
